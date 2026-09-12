@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard | Phishing Campaign Simulator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🛡️ PhishGuard</div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#campaign">Campaign</a>
+            <a href="#results">Results</a>
+            <a href="#report">Report</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="hero">
+            <div>
+                <p class="tag">CYBER SECURITY PROJECT</p>
+
+                <h1>Phishing Campaign<br>Simulation</h1>
+
+                <p class="intro">
+                    A safe educational platform for simulating and
+                    analyzing phishing-awareness campaigns.
+                </p>
+
+                <button onclick="startCampaign()">
+                    Start Campaign
+                </button>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Campaign Overview</h2>
+
+                <div class="stats">
+                    <div>
+                        <span id="sent">0</span>
+                        <small>Emails Sent</small>
+                    </div>
+
+                    <div>
+                        <span id="opened">0</span>
+                        <small>Opened</small>
+                    </div>
+
+                    <div>
+                        <span id="clicked">0</span>
+                        <small>Clicked</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Campaign -->
+        <section id="campaign" class="section">
+            <h2>Create Campaign</h2>
+
+            <div class="form-card">
+
+                <label>Campaign Name</label>
+                <input
+                    type="text"
+                    id="campaignName"
+                    placeholder="Example: Cyber Awareness Test"
+                >
+
+                <label>Email Template</label>
+                <select id="emailTemplate">
+                    <option>Security Awareness Test</option>
+                    <option>Password Security Awareness</option>
+                    <option>Suspicious Link Awareness</option>
+                </select>
+
+                <label>Test Recipients</label>
+                <input
+                    type="number"
+                    id="recipients"
+                    value="10"
+                    min="1"
+                    max="100"
+                >
+
+                <button onclick="createCampaign()">
+                    Create Campaign
+                </button>
+
+                <p id="campaignMessage"></p>
+
+            </div>
+        </section>
+
+
+        <!-- Results -->
+        <section id="results" class="section">
+
+            <h2>Campaign Results</h2>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <h3>📨 Sent</h3>
+                    <strong id="resultSent">0</strong>
+                </div>
+
+                <div class="result-card">
+                    <h3>👀 Opened</h3>
+                    <strong id="resultOpened">0</strong>
+                </div>
+
+                <div class="result-card">
+                    <h3>🔗 Clicked</h3>
+                    <strong id="resultClicked">0</strong>
+                </div>
+
+                <div class="result-card">
+                    <h3>📊 Awareness</h3>
+                    <strong id="awareness">0%</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Report -->
+        <section id="report" class="section">
+
+            <h2>Awareness Report</h2>
+
+            <div class="report-card">
+
+                <h3>Campaign Summary</h3>
+
+                <p>
+                    This project demonstrates how a phishing-awareness
+                    campaign can be simulated in a controlled educational
+                    environment.
+                </p>
+
+                <div class="report-info">
+                    <p><b>Campaign:</b> <span id="reportCampaign">Not Started</span></p>
+                    <p><b>Recipients:</b> <span id="reportRecipients">0</span></p>
+                    <p><b>Status:</b> <span id="status">Not Started</span></p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>PhishGuard © 2026 | Educational Cyber Security Project</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

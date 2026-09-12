@@ -1,0 +1,13 @@
+{
+  "campaignName": "Cyber Awareness Test",
+  "template": "Security Awareness Test",
+  "recipients": 10,
+  "results": {
+    "sent": 10,
+    "opened": 7,
+    "clicked": 3,
+    "awareness": "70%"
+  },
+  "status": "Campaign Completed",
+  "purpose": "Educational phishing awareness simulation"
+}
